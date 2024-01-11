@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: apache2
+      app: httpd
   replicas: 4 
   template:
     metadata:
       labels:
-        app: apache2
+        app: httpd
     spec:
       containers:
-      - name: apache2
-        image: apache2:latest
+      - name: httpd
+        image: httpd:latest
         ports:
-        - containerPort: 81
+        - containerPort: 80
